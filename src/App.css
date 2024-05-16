@@ -1,38 +1,93 @@
-.App {
+/*  
+ .btn-inc, .btn-dec {
+  background-color: #45be47; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-inc:hover, .btn-dec:hover  {
+  background-color: #113672; 
+  box-shadow: 0 6px 8px rgb(189, 172, 255); 
+} */
+
+.calculator { 
+   background-color: white;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(53, 60, 94, 0.947);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.keypad {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  flex: 3;
+}
+
+.operators {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  flex: 1;
+}
+
+button {
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a4a1a1;
+}
+
+.operator {
+  background-color: #370e0e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.clear {
+  background-color: #262424;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.equal {
+  background-color: #370e0e;
+  color: rgb(255, 255, 255);
 }
